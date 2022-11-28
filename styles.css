@@ -50,6 +50,17 @@ body {
     justify-content: space-evenly;
 }
 
+/* небо - круговой градиент */
+.sky {
+    background: radial-gradient(
+        circle closest-corner at 15% 15%, /* это перемещает начало градиента на 15% сверху и слева*/
+        #ffcf33 0%,
+        #ffcf33 20%,
+        #ffff66 21%,
+        #bbeeff 100%
+    );
+}
+
 /* первое фоновое здание */
 .bb1 {
     width: 10%;
