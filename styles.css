@@ -1,13 +1,13 @@
 /*объявляю переменные с цветом*/
 :root {
-    --building-color1: #aa80ff; 
+    --building-color1: #aa80ff; /* цвет зданий */
     --building-color2: #66cc99;
     --building-color3: #cc6699;
     --building-color4: #538cc6;
-    --window-color1: black;
+    --window-color1: black;   /* цвет окон (window) зданий*/
     --window-color2: #8cd9b3;
     --window-color3: #d98cb3;
-
+    --window-color4: #8cb3d9;
 }
 
 
@@ -36,13 +36,24 @@ body {
     justify-content: space-evenly; /*контетн блока распределится равномерно*/
 }
 
+/* общая стилизация для фоновых строений 1 и 4 */
+.building-wrap {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+/* окна четверного фонового строения */
+.window-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /* первое фоновое здание */
 .bb1 {
     width: 10%;
     height: 70%;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
 }
 
 .bb1a {
@@ -114,7 +125,32 @@ body {
 .bb4 {
     width: 11%;
     height: 58%;
+    
+}
+
+.bb4a {
+    width: 3%;
+    height: 10%;
     background-color: var(--building-color4);
+}
+
+.bb4b {
+    width: 80%;
+    height: 5%;
+    background-color: var(--building-color4);
+}
+
+.bb4c {
+    width: 100%;
+    height: 85%;
+    background-color: var(--building-color4);
+}
+
+/* окно четвертого фонового строения */
+.bb4-window {
+    width: 18%;
+    height: 90%;
+    background-color: var(--window-color4);
 }
 
 /* блок для зданий переднего плана
