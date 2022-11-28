@@ -1,13 +1,16 @@
+/*объявляю переменные с цветом*/
 :root {
-    --building-color1: #aa80ff; /*объявляю переменные с цветом*/
+    --building-color1: #aa80ff; 
     --building-color2: #66cc99;
     --building-color3: #cc6699;
     --building-color4: #538cc6;
+    --window-color1: black;
 }
 
 
 /* добавляю границы ко всем элементам,
-это поможет визиализировать расположение и размер элементов */
+это поможет визиализировать расположение и размер элементов
+потом удалить */
 * {
     border: 1px solid black;
     box-sizing: border-box; /*граница не будет добавлять размер элементам*/
@@ -41,27 +44,33 @@ body {
 
 .bb1a {
     width: 70%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1b {
     width: 80%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1c {
     width: 90%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1d {
     width: 100%;
     height: 70%;
-    background-color: var(--building-color1);
-}
+    background: linear-gradient(
+        var(--building-color1) 50%,
+        var(--window-color1)
+      );
+  }
+
+/* высота и градиент верхних частей фонового строения 1 */
+  .bb1-window {
+    height: 10%;
+    background: linear-gradient(
+        var(--building-color1),
+        var(--window-color1)
+      );
+  }
 
 /* второе фоновое здание */
 .bb2 {
